@@ -57,6 +57,7 @@ function Snowman({
     });
 
     setNWrong(n => n + (answer.includes(ltr) ? 0 : 1));
+
   }
 
   /** generateButtons: return array of letter buttons to render */
@@ -76,6 +77,7 @@ function Snowman({
   return (
       <div className="Snowman">
         <img src={(images)[nWrong]} alt={nWrong} />
+        <p>Number wrong: {nWrong}</p>
         <p className="Snowman-word">{guessedWord()}</p>
         <p>{generateButtons()}</p>
       </div>
